@@ -18,7 +18,11 @@ class Number:
         """
         len
         """
-        return len(self.number)
+        a = self.number
+        if type(a)==float:
+            return len(str(a))-1
+        else:
+            return len(str(a))
     def even(self):
         """
         check if the number is even
@@ -43,5 +47,5 @@ class Number:
         check if the number is prime
         """
         return 0
-x = Number(20)
-print(x.negative())
+x = Number(20.0)
+print(x.len())
