@@ -3,7 +3,6 @@ import math
 class Number:
     def __init__(self,num):
         self.number = num
-    
     def positive(self):
         """
         check if the number is positive
@@ -46,12 +45,6 @@ class Number:
         """
         check if the number is prime
         """
-        d = self.number
-        m = range((d//2)+1)[2:]
-        for i in m:
-            if d%i==0:
-                return True
-            else:
-                return False
-x = Number(20.0)
-print(x.prime())
+        return 0
+x = Number(20)
+print(x.negative())
