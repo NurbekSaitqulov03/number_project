@@ -3,48 +3,41 @@ import math
 class Number:
     def __init__(self,num):
         self.number = num
-    def positive(self):
-        """
-        check if the number is positive
-        """
-        return self.number>=0
-    def negative(self):
-        """
-        check ifi the number is negative
-        """
-        return self.number<0
+    def data_type(self):
+        """check if the number is data type"""
+        return type(self.number)
     def len(self):
-        """
-        len
-        """
-        a = self.number
-        if type(a)==float:
-            return len(str(a))-1
-        else:
-            return len(str(a))
+        """check if the number is len"""
+        x = self.number
+        if type(x)==int:
+            return len(int(x))
+        elif type(x)==float:
+            return len(float(x))-1
+    def is_positive(self):
+        """check if the number is positive"""
+        return self.number>0
+    def is_negative(self):
+        """check if the number is negative"""
+        return self.number<0
+    def zero(self):
+        """check is the number is zero"""
+        return self.number==0
     def even(self):
-        """
-        check if the number is even
-        """
+        """check is the number is even"""
         return self.number%2==0
     def odd(self):
-        """
-        check if the number is odd"""
+        """check is the number is odd"""
         return self.number%2==1
-    def zero(self):
-        """
-        check if the number is zero
-        """
-        return self.number == 0
-    def data_type(self):
-        """
-        check if the number is type
-        """
-        return type(self.number)
     def prime(self):
-        """
-        check if the number is prime
-        """
-        return 0
-x = Number(20)
-print(x.negative())
+        """check is the number is prime"""
+        x = self.number
+        a = x//2
+        m = 0
+        for i in range(a+1)[2:]:
+            if x%i==0:
+                m = False
+            if x%i==1:
+                m = True
+            return m
+z = Number(23)
+print(z.prime())
