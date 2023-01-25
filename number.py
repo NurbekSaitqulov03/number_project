@@ -10,9 +10,9 @@ class Number:
         """check if the number is len"""
         x = self.number
         if type(x)==int:
-            return len(int(x))
+            return len(str(x))
         elif type(x)==float:
-            return len(float(x))-1
+            return len(str(x))-1
     def is_positive(self):
         """check if the number is positive"""
         return self.number>0
@@ -40,4 +40,4 @@ class Number:
                 m = True
             return m
 z = Number(23)
-print(z.prime())
+print(z.len())
