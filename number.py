@@ -30,7 +30,7 @@ class Number:
         return self.number%2==1
     def prime(self):
         """check is the number is prime"""
-        x = self.number
+        x = abs(self.number)
         a = x//2
         m = 0
         for i in range(a+1)[2:]:
@@ -39,5 +39,5 @@ class Number:
             if x%i==1:
                 m = True
             return m
-z = Number(23)
-print(z.len())
+z = Number(-23)
+print(z.prime())
